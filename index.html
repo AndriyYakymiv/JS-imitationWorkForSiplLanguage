@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="css/digraph.css">
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<form id="prompt-form" >
+  
+<div class="row">
+  <div class=" allContainer col-3 col-m-12">
+
+      <div class="inputContainer col-12 col-m-6">
+        <h4 class="header col-12 col-m-12"> INPUT ALL DATA: </h4>
+        <div class="col-12 col-m-12">
+          <TEXTAREA id="programText" onfocus="if (this.value == 'Input programm here...') {this.value = '';}" class="input inpProg">Input programm here...</TEXTAREA>
+        </div>
+
+        <div class="col-12 col-m-12">
+          <input id="inputText" class="input inpVal" value="Input value here..."  onfocus="if (this.value == 'Input value here...') {this.value = '';}">
+        </div>
+
+        <div class="col-12 col-m-12">
+          <input disabled  class="input outVal" id="outputText">
+        </div>
+
+        <div class="col-6 col-m-6">
+         <input type="button" value="Build tree"  class="button buildTreeBut" onclick="loadTree()" id="okbutton">
+        </div>
+
+        <div class="col-6 col-m-6">
+          <input type="button" value="Imitate" class="button imitWorkBut"  onclick="Imitate()" id="showbutton">
+        </div>
+      </div>
+
+      <div class="autoFillContainer col-12 col-m-6">
+        <div class="col-12 col-m-12">
+          <h5 class="autoFillText"> 
+            Try some programs!
+            Press one of these buttons to autofill input areas.
+          </h5>
+        </div>
+
+        <div class="col-6 col-m-6">
+         <input type="button" value="DIV program"  class="button"  onclick="autoFillDiv()" id="okbutton">
+        </div>
+
+        <div class="col-6 col-m-6">
+         <input type="button" value="SUM program"  class="button"  onclick="autoFillSum()" id="okbutton">
+        </div>
+      </div>
+  </div>
+
+  <div class="treeContainer col-9 col-m-12">
+    <div id="tree" class="showTree"></div>
+  </div>
+</div>
+</form>
+
+  <script type="text/javascript" src="js/buildTree.js"></script>
+  <script type="text/javascript" src="js/defParent.js"></script>
+  <script type="text/javascript" src="js/Parser.js"></script>
+  <script type="text/javascript" src="js/autoFillAndLoadTree.js"></script>
+  <script type="text/javascript" src="js/readData.js"></script>
+
+</body>
+
+</html>
+

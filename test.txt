@@ -1,0 +1,31 @@
+A : 13, D : 3
+
+DIV(A,D)
+begin
+Q := 0;
+R := A;
+while R >= D do
+begin
+Q := Q + 1;
+R := R - D;
+end
+end
+
+
+
+N : 3
+
+SUM(N)
+begin
+I := 0;
+F := 1;
+R := 1;
+while I != N do
+begin
+I := I + 1;
+F := F * I;
+R := R + F
+end
+end	
+
+
